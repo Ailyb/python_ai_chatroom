@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Chatroom</title>
+</head>
+<body>
+  <h1>Welcome to the AI Chatroom!</h1>
+  <button onclick="joinChat()">Join Chatroom</button>
+
+  <script>
+    function joinChat() {
+      const ws = new WebSocket("ws://localhost:8000/ws/sample-room");
+      ws.onmessage = function(event) {
+        alert("Message from server: " + event.data);
+      };
+      ws.onopen = function() {
+        ws.send("Hello, I am a human!");
+      };
+    }
+  </script>
+</body>
+</html>

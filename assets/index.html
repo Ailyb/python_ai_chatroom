@@ -93,6 +93,12 @@
             document.getElementById('logs').scrollTop = document.getElementById('logs').scrollHeight;
         }
 
+        function addAIUser() {
+            fetch('/add_ai_user', { method: 'POST' })
+                .then(() => showText('system', 'info', 'GeminiAI added to the chat'))
+                .catch(() => showText('system', 'error', 'Failed to add GeminiAI'));
+        }
+
         // Add Enter and Shift+Enter key support after DOM is loaded
         document.addEventListener('DOMContentLoaded', function () {
             const textArea = document.getElementById('text');
@@ -144,6 +150,7 @@
                         <textarea id="text" placeholder="Say text here" class="input" rows="3"></textarea>
                         <button id="send" class="bg-gray-900 text-white p-1 px-3 rounded-md hover:bg-opacity-90"
                             onclick="doSend()">Send</button>
+                        <button onclick="addAIUser()" class="bg-blue-600 text-white p-1 px-3 rounded-md ml-2">Add AI User</button>
                     </div>
                 </div>
             </div>

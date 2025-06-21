@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2
+httpx
+google.generativeai
+logging
+asyncio
+datetime
+pydantic

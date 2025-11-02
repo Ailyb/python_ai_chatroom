@@ -19,21 +19,24 @@ wheels/
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
-.installed.cfg
+.installed.cfg 
 *.egg
 MANIFEST
-
 # Virtual Environment
 .venv/
 venv/
 ENV/
 env/
+
 .virtualenv
+
 
 # Environment Variables
 .env
 .env.local
+
 .env.*.local
+
 
 # IDE
 .vscode/
@@ -41,6 +44,17 @@ env/
 *.swp
 *.swo
 *~
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Test Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
 .DS_Store
 
 # Testing
@@ -60,11 +74,16 @@ htmlcov/
 
 # Logs
 logs/
+
 *.log
 
 # OS
 .DS_Store
 Thumbs.db
+
+
+# Alembic
+alembic.ini.backup
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -88,3 +107,4 @@ media/
 # Documentation
 docs/_build/
 site/
+

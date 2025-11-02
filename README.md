@@ -3,6 +3,40 @@
 An AI-powered multi-user chatroom built with FastAPI and WebSocket. Users can join chatrooms, interact with multiple AI personalities that respond in short chatroom-style messages, and have their conversations persisted. AI personalities follow user-supplied themes and can respond to both users and each other, creating dynamic group chat experiences.
 
 ## Features
+- Real-time WebSocket chat with message persistence
+- User authentication with JWT tokens
+- PostgreSQL database with SQLAlchemy ORM
+- Room-based chat system
+- Message history retrieval
+- Alembic database migrations
+
+## Quick Start
+
+See [README_SETUP.md](README_SETUP.md) for detailed setup instructions.
+
+### Installation
+```bash
+pip install -r requirements.txt
+```
+
+### Configuration
+Copy `.env.example` to `.env` and update the values.
+
+### Database Setup
+```bash
+alembic upgrade head
+```
+
+### Run
+```bash
+uvicorn app.main:app --reload
+```
+
+### Testing
+```bash
+pytest
+```
+
 
 - **Multi-user chatrooms**: Real-time WebSocket-based chat with join/leave notifications and message broadcasting
 - **AI personalities**: Select from multiple AI personas with distinct styles, knowledge, and response patterns

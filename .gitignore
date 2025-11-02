@@ -16,19 +16,27 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
-.installed.cfg
+.installed.cfg 
 *.egg
-
+MANIFEST
 # Virtual Environment
 .venv/
 venv/
 ENV/
 env/
 
+.virtualenv
+
+
 # Environment Variables
 .env
 .env.local
+
+.env.*.local
+
 
 # IDE
 .vscode/
@@ -47,12 +55,56 @@ env/
 htmlcov/
 .pytest_cache/
 
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+*.cover
+*.log
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
 # Logs
+logs/
+
 *.log
 
 # OS
 .DS_Store
 Thumbs.db
 
+
 # Alembic
 alembic.ini.backup
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Node (if Tailwind build)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Static files
+staticfiles/
+media/
+
+# Documentation
+docs/_build/
+site/
+
